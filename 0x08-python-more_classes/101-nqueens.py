@@ -1,7 +1,15 @@
 #!/usr/bin/python3
-"""
-The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
-
+"""101-nqueens finds all possible solutions the N queens puzzle, including
+translations and reflections.
+Attempted virtual backtracking without recursion. In local tests process will
+start to slow down visibly for N > 8, and is successful up to N = 11 but
+will be killed if used for N > 11. Recursion could allow for a lighter weight
+process, but it's not yet apparent to this student how to retain a record of
+which solutions are already derived with that method.
+Attributes:
+    N (int): base number of queens, and length of board side in piece positions
+    candidates (list) of (list) of (list) of (int): list of all successful
+        solutions for given amount of columns checked
 """
 from sys import argv
 
