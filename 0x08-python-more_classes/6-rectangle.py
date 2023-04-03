@@ -108,4 +108,34 @@ class Rectangle:
         Returns:
             str (str): string suitable for printing rectangle (final newline
             omitted)
+        """
+        str = ""
+        for row in range(self.__height):
+            for col in range(self.__width):
+                str += '#'
+            if self.__width != 0 and row < (self.__height - 1):
+                str += '\n'
+        return str
 
+    def __str__(self):
+        """Allows direct printing of instances.
+        Returns:
+            The output of _draw_rectangle, which creates a string
+        representation of the rectangle suitable for printing.
+        """
+        return self._draw_rectangle()
+
+    def __repr__(self):
+        """Allows use of eval().
+        Returns:
+            A string of the code needed to create the instance.
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    @classmethod
+    def __del__(cls):
+        """Decrements `number_of_instances`, then prints message upon
+        deletion of instance.
+        """
+        cls.number_of_instances -= 1
+        print('Bye rectangle...')
