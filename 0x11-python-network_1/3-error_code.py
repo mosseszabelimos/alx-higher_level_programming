@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script for testing status of web pages
+"""Write a Python script for testing status of web pages
 """
 if __name__ == "__main__":
     import urllib.request

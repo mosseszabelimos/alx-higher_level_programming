@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script for posting data to web servers
+"""Write a Python script for posting data to web servers
 """
 if __name__ == "__main__":
     import requests
